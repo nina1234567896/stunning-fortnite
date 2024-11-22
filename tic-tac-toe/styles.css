@@ -1,0 +1,163 @@
+
+ *, ::before , ::after {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+ }
+html{
+    background-color:rgb(91, 252, 236);
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: 14rem;
+    font-weight: 400;
+    font-size: 6rem;
+    
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    gap:0.8rem;
+    margin-top:50px;
+    
+}
+p1 {
+
+    text-align: center;
+    color: rgb(48, 54, 56,0.6);
+    
+   
+
+
+}
+main{
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+    left:500px;
+    
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows:repeat(3,100px);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    filter: blur(0.1px);
+    position:relative;
+
+}
+
+
+#board .tile {
+    border-bottom:1px solid rgb(216, 215, 215);
+    border-right:1px solid rgb(216, 215, 215);
+    text-align: center;
+    font-size: 80px;
+    cursor:pointer;
+    transition:all ease 700ms;
+     
+}
+
+.message {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    height:200px;
+    width:500px;
+    color :rgb(165, 181, 182);
+    background-color: white;
+    border-radius:5px;
+    box-shadow: 2px 2px 2px 2px gray;
+    left:-110px;
+    top:50px;
+   display:none;
+   transition:all ease-in 900ms;
+   
+
+    }
+
+    @keyframes blink {
+        
+      from {
+        color :rgb(165, 181, 182,0);
+
+      }
+      to {
+        color :rgb(165, 181, 182,1);
+      }
+    }
+    .message p {
+        font-family: "Cutive Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size:0.8rem;
+        text-align: center;
+        border: 1px dashed rgb(179, 179, 179);
+        height:170px;
+        margin:15px;
+        letter-spacing: 1px;
+        animation:infinite blink 400ms;
+        
+    }
+
+    .message button {
+        position:absolute;
+        display:block;
+        height:50px;
+        width:150px;
+        background-color: rgb(194, 248, 255);
+        color:rgb(255, 255, 255);
+        font-size:0.3rem;
+        font-family: "Cutive Mono", monospace;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing:2px;
+       border: none;
+       border-radius:20px;
+       cursor:pointer;
+       transition:all ease-in-out 300ms;
+       top:110px;
+       left:160px;
+     
+       
+    }
+    .message button:hover {
+       background-color: rgb(91, 185, 206,0.8);
+       color: #fff;
+       text-shadow:
+       0 0 7px #fff,
+       0 0 10px #fff,
+       0 0 21px #fff,
+       0 0 42px #0fa,
+       0 0 82px #0fa,
+       0 0 92px #0fa,
+       0 0 102px #0fa,
+       0 0 151px #0fa;
+    }
+    .message button:focus {
+        background-color: rgb(91, 185, 206,0.8);
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    }
+    .message button:active {
+        background-color: rgb(91, 185, 206,0.8);
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    }
